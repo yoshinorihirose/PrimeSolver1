@@ -45,6 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.loadButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // startButton
@@ -80,7 +81,7 @@
             this.logTextBox.Multiline = true;
             this.logTextBox.Name = "logTextBox";
             this.logTextBox.ReadOnly = true;
-            this.logTextBox.Size = new System.Drawing.Size(552, 316);
+            this.logTextBox.Size = new System.Drawing.Size(552, 261);
             this.logTextBox.TabIndex = 3;
             // 
             // backgroundWorker
@@ -205,11 +206,22 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.Location = new System.Drawing.Point(631, 441);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(476, 22);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "[GitHub] github.com/yoshinorihirose/PrimeSolver1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1214, 495);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.loadButton);
             this.Controls.Add(this.label5);
@@ -253,6 +265,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button loadButton;
         private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Label label6;
     }
 }
 
