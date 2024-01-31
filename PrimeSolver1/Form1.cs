@@ -149,7 +149,8 @@ namespace PrimeSolver1
                 while (!isCancelling && isPaused) Thread.Sleep(100);
                 if (isCancelling) return;
                 isCompleted = !counter.MoveNext();
-                backgroundWorker.ReportProgress(counter.Progress);
+                string stepProgress = "" + counter.CurrentStep + " / " + counter.Steps;
+                backgroundWorker.ReportProgress(counter.Progress, stepProgress);
             } while (!isCompleted);
             Debug.WriteLine(counter.Count.ToString());
             e.Result = counter.Count.ToString();
@@ -158,7 +159,7 @@ namespace PrimeSolver1
         private void backgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             progressBar1.Value = e.ProgressPercentage;
-            progressLabel.Text = "実行中 (" + e.ProgressPercentage + "%)";
+            progressLabel.Text = "実行中 [" + ((string)e.UserState) + "] (" + e.ProgressPercentage + "%)";
         }
 
         private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
